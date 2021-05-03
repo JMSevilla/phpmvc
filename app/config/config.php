@@ -20,6 +20,9 @@ class dbh {
     }
 
   }
+  public function queryable($sql){
+    return $this->stmt = $this->connect()->query($sql);
+  }
   public function checkingModels($sql) {
     return $this->stmt = $this->connect()->prepare($sql);
   }
@@ -34,6 +37,12 @@ class dbh {
   }
   public function executable(){
     return $this->stmt->execute();
+  }
+  public function response(){
+    return json_encode(array("statusCode" => 200));
+  }
+  public function encrypt($norm){
+    return password_hash($norm, PASSWORD_DEFAULT);
   }
   public function bind($val, $param, $type = null){
     if(is_null($type)){

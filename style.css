@@ -1,0 +1,43 @@
+.layer-1 .card{
+  background-color: #434446;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.layer-1 h2{
+  color: #2f8abe;
+}
+.layer-1 p{
+  color: white;
+}
+
+.header-user {
+  background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url('https://undsgn.com/wp-content/uploads/2018/04/01_funny-and-inspiring-graphic-design-related-gifs.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+.header-user h1{
+  color:#7289DA;
+}
+.header-user p {
+  color: white;
+}
+
+.layer-2{
+  background-color: #7F94DD;
+  padding: 50px;
+  margin-top: 50px;
+  color: white;
+}
+.layer-2 h1{
+  color: #23272A;
+  font-weight: bold;
+}
+
+.layer-2 h5{
+  color: white;
+  line-height: 140%;
+  margin-top: 30px;
+}
