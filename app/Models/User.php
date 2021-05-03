@@ -1,5 +1,5 @@
 <?php
-spl_autoload_register('route_database');
+
 class UserModels extends dbh{
   public function userDB($table){
     include('../Queries/queries.php');
@@ -34,10 +34,4 @@ class UserModels extends dbh{
       }
     }
   }
-}
-
-function route_database(){
-  include('../Route/webapi.php');
-  include_once $route['database'];
-  include_once $user_route['controller'];
 }

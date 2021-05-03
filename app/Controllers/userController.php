@@ -1,5 +1,5 @@
 <?php
-spl_autoload_register('route_db');
+
 class userController extends dbh {
   public function userstore($data){
     if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -14,7 +14,7 @@ class userController extends dbh {
             $this->bind(":email", $data['regemail']);
             $this->bind(":pass", $this->encrypt($data['regpassword']));
             if($this->executable()){
-              $this->response();
+              echo $this->response();
             }
           }
         }
@@ -34,8 +34,4 @@ class userController extends dbh {
       }
     }
   }
-}
-function route_db(){
-  include('../Route/webapi.php');
-  include_once $route['database'];
 }

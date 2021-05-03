@@ -1,6 +1,6 @@
-<div class="header-user">
+<div class="header-user-signin">
   <div class="container">
-    <h1>Registration Account</h1>
+    <h1>Sign in Account</h1>
     <p>Join our development community now !</p>
   </div>
 </div>
@@ -8,16 +8,16 @@
   <div class="container" style="margin-top: 50px;">
     <div class="row" >
       <div class="col-md-6">
-        <img src="https://cdn.dribbble.com/users/1475355/screenshots/7101469/media/0615bc266e47391a8ce5229608cbec76.png?compress=1&resize=1000x750" class="img-fluid" alt="">
+        <img src="https://discord.com/assets/588961cb526f0fcd19e96b27b83569d9.svg" class="img-fluid" alt="">
       </div>
       <div class="col-md-6">
-        <div class="card">
+        <div class="card" >
           <div class="card-body">
             <div class="alert alert-danger" role="alert" id="error1" style="display:none;">
           </div>
-            <h2>Registration</h2>
-            <p>Here you can create your account!</p>
-            <?php include("libraries/resources/registerforms.php"); ?>
+            <h2>Sign in</h2>
+            <p>Here you can sign in your account!</p>
+            <?php include("libraries/resources/signinforms.php"); ?>
           </div>
         </div>
       </div>
@@ -25,7 +25,68 @@
   </div>
 </div>
 
-
+<div class="services" style="margin-top: 50px;">
+  <div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-sm">
+        <div class="card text-center service1-card" >
+          <div class="card-body">
+            <img src="https://cdn4.iconfinder.com/data/icons/good-life-1/512/SkillDevelopment-personaldevelopment-skills-personality-effective-128.png" style="width: 20%; height: auto;" alt="">
+            <h4 class="mt-3">Skills Analysis</h4>
+            <p>The team will give you a time to consult with us or raise an idea for the team development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card text-center service2-card">
+          <div class="card-body">
+            <img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1011_multi-circle_c-256.png" style="width: 14%; height: auto;" alt="">
+            <h4 class="mt-3">Objectives</h4>
+            <p>Our team will help and give you some tips on achieving your goals in the field of Developers Industry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card text-center service3-card">
+          <div class="card-body">
+            <img class="img-fluid" src="https://cdn1.iconfinder.com/data/icons/business-finance-vol-3-39/512/business_plan_product_industry-128.png" style="width: 20%; height: auto;" alt="">
+            <h4>Action Plan</h4>
+            <p>As much as possible we will provide some techniques and tips on how you will able to write code easily.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <div class="card text-center service4-card">
+          <div class="card-body">
+            <img src="https://cdn4.iconfinder.com/data/icons/good-life-1/512/SkillDevelopment-personaldevelopment-skills-personality-effective-128.png" style="width: 20%; height: auto;" alt="">
+            <h4 class="mt-3">Skills Analysis</h4>
+            <p>The team will give you a time to consult with us or raise an idea for the team development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card text-center service5-card">
+          <div class="card-body">
+            <img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1011_multi-circle_c-256.png" style="width: 14%; height: auto;" alt="">
+            <h4 class="mt-3">Objectives</h4>
+            <p>Our team will help and give you some tips on achieving your goals in the field of Developers Industry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card text-center service6-card">
+          <div class="card-body">
+            <img src="https://cdn1.iconfinder.com/data/icons/business-finance-vol-3-39/512/business_plan_product_industry-128.png" style="width: 20%; height: auto;" alt="">
+            <h4 >Action Plan</h4>
+            <p>As much as possible we will provide some techniques and tips on how you will able to write code easily.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="layer-2">
   <div class="container" >

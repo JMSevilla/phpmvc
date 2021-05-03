@@ -13,6 +13,11 @@ const request = {
     return $.post(state.app + state.helpers + "/userHelper.php", obj, (response) => {
       resolve(response)
     })
+  },
+  userLogin(obj, resolve){
+    return $.post(state.app + state.helpers + "/loginHelper.php", obj, function(response){
+      resolve(response)
+    })
   }
 }
 
@@ -37,6 +42,17 @@ const asynchronous = {
       request.userRegistration(obj, resolve)
     })
     await promise.then(response => {
+      console.log(response)
+    })
+  },
+  async lodash_login(obj){
+    await Promise.all([this.lodash_user_log(obj)])
+  },
+  async lodash_user_log(obj){
+    const promise = new Promise((resolve) => {
+      request.userLogin(obj, resolve)
+    })
+    await promise.then((response) => {
       console.log(response)
     })
   }

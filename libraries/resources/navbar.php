@@ -10,6 +10,9 @@
       />
       MDBootstrap
     </a>
+    <div style="display: inline;">
+    <a href="signin.php" class="nav-link-item btn">Sign in</a> / 
     <a href="register.php" class="nav-link-item btn">Register</a>
+    </div>
   </div>
 </nav>

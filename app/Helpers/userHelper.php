@@ -5,7 +5,9 @@ if(isset($_POST['regTrigger']) == 1){
   $callback->userDB($_POST['table']);
 }
 
+//Eto yung bagong update for php routing. One call damay na si models, controllers.
 function route_models(){
   include('../Route/webapi.php');
-  include_once $user_route['models'];
+  $callback = new route();
+  $callback->apiroute_signup("config.php", "userController.php", "User.php");
 }

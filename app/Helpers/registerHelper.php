@@ -7,6 +7,7 @@ if(isset($_POST['rTrigger']) == 1){
 }
 
 function route_models(){
-  include("../Route/webapi.php");
-  include_once $route['models'];
+  include('../Route/webapi.php');
+  include('../Globals/global.php');
+  route(roots(1), '/Register.php');
 }

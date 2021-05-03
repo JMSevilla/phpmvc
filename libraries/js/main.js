@@ -47,3 +47,21 @@ function regvalidate(obj){
     http.lodash_register(obj)
   }
 }
+
+$('#signbtn').click(function(){
+  var obj = {
+    signusername: signusername.value,
+    signpassword: signpassword.value,
+    LogTrigger: 1, table: 'users'
+  }
+  logValidate(obj)
+})
+function logValidate(obj){
+  if(!obj.signusername || !obj.signpassword){
+    alert("empty fields");
+    return false;
+  }
+  else{
+    http.lodash_login(obj)
+  }
+}
