@@ -1,11 +1,12 @@
 <?php
-// spl_autoload_register('route_models');
+spl_autoload_register('router_models');
 if(isset($_POST['LogTrigger']) == 1){
-  // $callback = new LoginModels();
-  // $callback->logs('hello world');
+  $callback = new LoginModels();
+  $callback->logs($_POST['table']);
 }
-// function route_models(){
-//   include('../Route/webapi.php');
-//   include('../Globals/global.php');
-//   route(roots(1), '/Login.php');
-// }
+
+function router_models(){
+  include('../Route/webapi.php');
+  $callback = new route();
+  $callback->apiroute_login("config.php", "loginController.php", "Login.php");
+}

@@ -3,7 +3,7 @@
 class UserModels extends dbh{
   public function userDB($table){
     include('../Queries/queries.php');
-    if($this->checkingModels($checker['sequel'])){
+    if($this->checkingModels(modelcheck())){
       $this->bind(":mytable", $table);
       $this->executable();
       if($this->tableCounting()){

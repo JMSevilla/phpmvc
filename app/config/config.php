@@ -35,12 +35,13 @@ class dbh {
   public function tableCounting(){
     return $this->stmt->rowCount() > 0;
   }
+  public function getuserdata(){
+    return $this->stmt->fetch(PDO::FETCH_ASSOC);
+  }
   public function executable(){
     return $this->stmt->execute();
   }
-  public function response(){
-    return json_encode(array("statusCode" => 200));
-  }
+
   public function encrypt($norm){
     return password_hash($norm, PASSWORD_DEFAULT);
   }
@@ -58,5 +59,37 @@ class dbh {
       }
     }
     return $this->stmt->bindParam($val, $param, $type);
+  }
+  //dynamic responses
+  public function response(){
+    return json_encode(array("statusCode" => 200));
+  }
+  //response for invalid password
+  public function invalid_response(){
+    return json_encode(array("statusCode" => 201));
+  }
+  //response for no user found
+  public notFound_response(){
+    return json_encode(array("statusCode" => 202));
+  }
+  //access session
+  public access_session($uid, $fname, $lname, $istype){
+     $_SESSION['access'] = true;
+     $_SESSION['fname'] = $fname;
+     $_SESSION['lname'] = $lname;
+     $_SESSION['istype'] = $istype;
+     $_SESSION['uid'] = $uid;
+  }
+
+  //decrypt password
+  public function decrypt($norm, $hash){
+    return password_verify($norm, $hash);
+  }
+  //for unit testing responses
+  public function unitCodeTest(){
+    return json_encode(array("TestCode1" => "OK"));
+  }
+  public function unitCodeTest1(){
+    return json_encode(array("TestCode1" => "OK1"));
   }
 }
